@@ -113,9 +113,24 @@ The application is designed to work across different screen sizes including desk
 
 # ⚙️ Installation and Setup
 
-Follow these steps to run the project locally.
-
-### 1. Clone the repository
+Follow these steps to run the project locally:
 
 ```bash
+# Clone the repository
 git clone https://github.com/harshavardhana-37/roamly-travel-app.git
+
+# Navigate into the project folder
+cd roamly-travel-app
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+```
+
+Then open the localhost link Vite gives you, usually:
+
+```text
+http://localhost:5173
+```
