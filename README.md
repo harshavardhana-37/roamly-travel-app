@@ -78,50 +78,28 @@ The trip planner allows users to:
 The application is designed to work across different screen sizes including desktop and mobile devices.
 
 ---
+## 📸 Screenshots
 
-# 🖼️ Screenshots
+### Homepage
+![Homepage](screenshots/homepage.jpeg)
 
-## Homepage
+### Explore Destinations
+![Destinations](screenshots/destination.png)
 
-![Homepage](./screenshots/homepage.jpeg)
+### Location Search
+![Location](screenshots/l.png)
 
----
+### Location Results & Weather
+![Location Results](screenshots/l2.png)
 
-## Explore Destinations
+### Trip Planner
+![Trip Planner](screenshots/planner.png)
 
-![Destination](./screenshots/destination)
+### Trip Planning
+![Trip Planner Step 2](screenshots/planner2.png)
 
----
-
-## Location Search
-
-![Location Search](./screenshots/l)
-
----
-
-## Location and Weather
-
-![Location and Weather](./screenshots/l2)
-
----
-
-## Trip Planner
-
-![Trip Planner](./screenshots/planner)
-
----
-
-## Trip Planner - Selecting Dates
-
-![Trip Planner Dates](./screenshots/planner2)
-
----
-
-## Trip Planner - Building Itinerary
-
-![Trip Planner Itinerary](./screenshots/planner3)
-
----
+### Final Itinerary
+![Trip Planner Step 3](screenshots/planner3.png)
 
 # 🛠️ Technologies Used
 
