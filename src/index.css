@@ -1,0 +1,821 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: #f4f2ee;
+  color: #1e1e1e;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+/* ================= NAVBAR ================= */
+
+nav {
+  height: 72px;
+  background: #f7f6f3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+nav h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 26px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #222;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+nav button {
+  border: none;
+  background: #202020;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: 0.2s;
+}
+
+nav button:hover {
+  transform: translateY(-2px);
+  background: #000;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+  min-height: 620px;
+  display: flex;
+  align-items: center;
+  padding: 80px 8%;
+  color: white;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.72),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("https://images.unsplash.com/photo-1464278533981-50106e6176b1?auto=format&fit=crop&w=2000&q=85");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-content {
+  max-width: 650px;
+}
+
+.eyebrow {
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  margin-bottom: 22px;
+}
+
+.hero h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(55px, 7vw, 92px);
+  line-height: 0.95;
+  margin-bottom: 28px;
+  font-weight: 600;
+}
+
+.hero-text {
+  max-width: 540px;
+  font-size: 16px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.88);
+  margin-bottom: 32px;
+}
+
+.hero button {
+  border: none;
+  background: white;
+  color: #222;
+  padding: 16px 25px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.hero button:hover {
+  transform: translateY(-3px);
+}
+
+/* ================= DESTINATIONS ================= */
+
+.destinations {
+  padding: 110px 8%;
+}
+
+.destinations .eyebrow,
+.about-section .eyebrow,
+.location-section .eyebrow {
+  color: #777;
+}
+
+.destinations h2,
+.about-section h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
+.destinations input {
+  width: 330px;
+  max-width: 100%;
+  padding: 16px 18px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  background: white;
+  outline: none;
+  margin-bottom: 38px;
+  font-size: 14px;
+}
+
+.destinations input:focus {
+  border-color: #777;
+}
+
+/* ================= DESTINATION CARDS ================= */
+
+.destination-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(280px, 1fr));
+  gap: 28px;
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+}
+
+.card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-content {
+  padding: 25px;
+}
+
+.card-content > p {
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: #777;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.card-content h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+
+.card-content span {
+  display: block;
+  color: #666;
+  font-size: 13px;
+  line-height: 1.7;
+  min-height: 45px;
+  margin-bottom: 20px;
+}
+
+.card-content button {
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  font-weight: 600;
+  color: #222;
+}
+
+.card-content button:hover {
+  text-decoration: underline;
+}
+
+/* ================= LOCATION ================= */
+
+.location-section {
+  padding: 110px 8%;
+  background: #f4f2ee;
+}
+
+.location-section h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(42px, 5vw, 70px);
+  margin-bottom: 18px;
+  line-height: 1.05;
+}
+
+.location-description {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 35px;
+  line-height: 1.7;
+}
+
+.location-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 650px;
+}
+
+.location-btn {
+  width: fit-content;
+  padding: 15px 24px;
+  border-radius: 50px;
+  border: none;
+  background: #222;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.location-btn:hover {
+  transform: translateY(-2px);
+  background: #444;
+}
+
+.location-search {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
+
+.location-search input {
+  flex: 1;
+  min-width: 0;
+  padding: 16px 20px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  font-size: 15px;
+  outline: none;
+  background: white;
+}
+
+.location-search input:focus {
+  border-color: #222;
+}
+
+.location-search button {
+  padding: 0 25px;
+  border: none;
+  border-radius: 12px;
+  background: #222;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+/* ================= LOCATION RESULT ================= */
+
+.current-location {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  background: white;
+  padding: 22px;
+  border-radius: 16px;
+  max-width: 650px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.current-location > span {
+  font-size: 25px;
+}
+
+.current-location p {
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #888;
+  margin-bottom: 7px;
+}
+
+.current-location h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.current-location small {
+  color: #777;
+}
+
+/* ================= WEATHER ================= */
+
+.weather-card {
+  margin-top: 22px;
+  background: #222;
+  color: white;
+  padding: 28px;
+  border-radius: 18px;
+  max-width: 650px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.weather-card .eyebrow {
+  color: #aaa;
+  margin-bottom: 12px;
+}
+
+.weather-card h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 30px;
+  margin-bottom: 25px;
+}
+
+.weather-details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.weather-details div {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 18px;
+  border-radius: 12px;
+}
+
+.weather-details span {
+  display: block;
+  font-size: 12px;
+  color: #bbb;
+  margin-bottom: 8px;
+}
+
+.weather-details strong {
+  font-size: 22px;
+}
+
+/* ================= SEARCH RESULTS ================= */
+
+.location-results {
+  margin-top: 15px;
+  max-width: 650px;
+  display: grid;
+  gap: 8px;
+}
+
+.location-results button {
+  background: white;
+  border: 1px solid #e3e3e3;
+  border-radius: 10px;
+  padding: 15px 18px;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.location-results button:hover {
+  border-color: #222;
+}
+
+.location-results strong {
+  font-size: 15px;
+}
+
+.location-results span {
+  color: #777;
+  font-size: 13px;
+}
+
+.location-error {
+  margin-top: 18px;
+  color: #b42318;
+}
+
+/* ================= ABOUT ================= */
+
+.about-section {
+  background: #1d1d1d;
+  color: white;
+  padding: 100px 8%;
+}
+
+.about-section h2 {
+  max-width: 650px;
+}
+
+.about-section > p:last-child {
+  max-width: 600px;
+  color: #aaa;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+/* ================= DESTINATION MODAL ================= */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 25px;
+}
+
+.destination-modal {
+  background: white;
+  width: min(900px, 100%);
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: 20px;
+  position: relative;
+}
+
+.destination-modal > img {
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+  display: block;
+}
+
+.modal-content {
+  padding: 35px;
+}
+
+.modal-content h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 45px;
+  margin-bottom: 15px;
+}
+
+.modal-content > p:not(.eyebrow) {
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.modal-content h3 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.places-list {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.place {
+  background: #f5f4f1;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.modal-content > button:last-child {
+  border: none;
+  background: #222;
+  color: white;
+  padding: 15px 24px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.close-btn {
+  position: absolute;
+  right: 18px;
+  top: 18px;
+
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+  border: none;
+
+  background: white;
+  color: #222;
+
+  font-size: 28px;
+  cursor: pointer;
+
+  z-index: 2;
+}
+
+/* ================= TRIP PLANNER ================= */
+
+.planner-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+
+  background: rgba(0, 0, 0, 0.65);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 25px;
+}
+
+.planner-modal {
+  width: min(850px, 100%);
+  max-height: 90vh;
+  overflow-y: auto;
+
+  background: #f7f6f3;
+  border-radius: 22px;
+  padding: 50px;
+
+  position: relative;
+
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.3);
+}
+
+.planner-modal h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(42px, 5vw, 64px);
+  margin-bottom: 15px;
+  padding-right: 50px;
+}
+
+.planner-modal > p {
+  color: #666;
+  margin-bottom: 40px;
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+.planner-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  width: 45px;
+  height: 45px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #222;
+  color: white;
+
+  font-size: 28px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* DATE SECTION */
+
+.trip-dates {
+  margin-bottom: 40px;
+}
+
+.trip-dates h3,
+.itinerary-section h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.date-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.date-inputs label {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.date-inputs input {
+  width: 100%;
+  padding: 15px;
+
+  border: 1px solid #ddd;
+  border-radius: 12px;
+
+  background: white;
+  color: #222;
+
+  outline: none;
+}
+
+.date-inputs input:focus {
+  border-color: #222;
+}
+
+/* ================= ITINERARY ================= */
+
+.itinerary-section {
+  margin-bottom: 35px;
+}
+
+.itinerary-list {
+  display: grid;
+  gap: 12px;
+}
+
+.itinerary-place {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: white;
+  border: 1px solid #e2e0db;
+  border-radius: 14px;
+
+  padding: 18px 20px;
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.itinerary-place:hover {
+  border-color: #222;
+  transform: translateY(-2px);
+}
+
+.itinerary-place.selected {
+  background: #222;
+  color: white;
+  border-color: #222;
+}
+
+.place-name {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.place-action {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* ================= PLANNER ACTIONS ================= */
+
+.planner-submit {
+  width: 100%;
+
+  border: none;
+  background: #222;
+  color: white;
+
+  padding: 18px 25px;
+  border-radius: 50px;
+
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+
+  transition: 0.2s;
+}
+
+.planner-submit:hover {
+  transform: translateY(-2px);
+  background: #000;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 700px) {
+  nav {
+    padding: 0 6%;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .hero {
+    padding: 70px 7%;
+    min-height: 580px;
+  }
+
+  .destinations,
+  .location-section,
+  .about-section {
+    padding: 80px 7%;
+  }
+
+  .destination-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .destinations h2,
+  .about-section h2 {
+    font-size: 40px;
+  }
+
+  .card img {
+    height: 240px;
+  }
+
+  .location-search {
+    flex-direction: column;
+  }
+
+  .location-search button {
+    padding: 15px;
+  }
+
+  .weather-details {
+    grid-template-columns: 1fr;
+  }
+
+  .destination-modal > img {
+    height: 230px;
+  }
+
+  .modal-content {
+    padding: 25px;
+  }
+
+  .modal-content h2 {
+    font-size: 38px;
+  }
+
+  .planner-overlay {
+    padding: 12px;
+  }
+
+  .planner-modal {
+    padding: 32px 20px;
+    border-radius: 18px;
+  }
+
+  .planner-modal h2 {
+    font-size: 42px;
+    padding-right: 45px;
+  }
+
+  .date-inputs {
+    grid-template-columns: 1fr;
+  }
+
+  .itinerary-place {
+    padding: 16px;
+  }
+}
